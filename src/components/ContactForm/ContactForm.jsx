@@ -47,7 +47,7 @@ export default function ContactForm({ onSubmit }) {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         ></Input>
-        <Box width={2} height={1} mt={2}>
+        <Box width={3} height={1} mt={2}>
           <ErrorMessage name="number" />
         </Box>
 

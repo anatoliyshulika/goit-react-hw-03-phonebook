@@ -26,26 +26,3 @@ ContactList.propTypes = {
   ).isRequired,
   onDelete: PropTypes.func.isRequired,
 };
-
-// export default function ContactList({ contacts, onDelete }) {
-//   return (
-//     <List>
-//       {contacts.map(({ id, name, number }) => (
-//         <ListItem key={id}>
-//           <div>{name}:</div>
-//           <Box
-//             width={2}
-//             display="flex"
-//             justifyContent="space-between"
-//             alignItems="center"
-//           >
-//             {number}
-//             <Button type="button" onClick={() => onDelete(id)}>
-//               Delete
-//             </Button>
-//           </Box>
-//         </ListItem>
-//       ))}
-//     </List>
-//   );
-// }
