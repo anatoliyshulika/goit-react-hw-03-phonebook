@@ -16,10 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const existedInLocalStorage = JSON.parse(
-      localStorage.getItem('contacts')
-    ).length;
-    if (existedInLocalStorage) {
+    if (JSON.parse(localStorage.getItem('contacts')).length) {
       this.setState({
         contacts: JSON.parse(localStorage.getItem('contacts')),
       });
