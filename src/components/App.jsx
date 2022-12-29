@@ -11,8 +11,15 @@ class App extends Component {
     filter: '',
   };
 
-  componentDidUpdate() {
-    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  componentDidUpdate(prevState) {
+    const stateContacts = this.state.contacts.length;
+    const localStorageContacts = JSON.parse(
+      localStorage.getItem('contacts')
+    ).length;
+    if (stateContacts !== localStorageContacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+      console.log('Запись в локалсторадж');
+    }
   }
 
   componentDidMount() {
